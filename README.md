@@ -1,18 +1,40 @@
-# XYZ Capture Grid Calculator
-A standalone interactive grid calculator for our in-house automated XYZ table photography. It instantly computes FOV, motor step sizes, and capture arrays to ensure exact overlap for PTGui stitching.
+# CHIL XYZ Capture Grid Calculator
 
-When digitizing oversized flat objects like maps, archival manuscripts, and large folios, calculating the exact motion grid for an automated XYZ table can be tedious. The CHIL XYZ Capture Grid Calculator is a standalone, interactive utility designed to streamline high-resolution heritage imaging workflows.
+![Capture Grid Calculator UI](./main-screen.png)
 
-By inputting the target object dimensions, desired PPI, and overlap percentage (optimized for software like PTGui), the calculator instantly generates the exact capture array. Built with a focus on high-end digital sensors like the Phase One 100MP back, this tool allows operators to easily translate physical surface areas into precise motor steps.
+A standalone, interactive planning tool for automated XYZ table macro photography and high-resolution heritage digitization. 
 
-Key Features:
-Real-Time Step Calculation: Translates your target PPI into a 1:1 physical Field of View (FOV) and calculates the exact X/Y distance per move based on your required overlap percentage.
+When imaging oversized archival materials (like maps, manuscripts, and large folios), calculating the exact physical motion grid for an automated XYZ table is critical. This calculator instantly computes the necessary 1:1 Field of View (FOV), motor step sizes, and capture arrays to ensure exact overlap for stitching software like PTGui.
 
-Automated Array Generation: Accurately computes the ceiling limits for required rows and columns (⌈(Object Size − FOV) / Step Size⌉ + 1) to guarantee full edge-to-edge coverage of the object.
+## 🚀 Features
 
-Visual Grid Feedback: Provides an immediate visual breakdown of the total shots, columns, and rows required for the job.
+* **Zero-Dependency:** Runs entirely locally in the browser. No installation, build steps, or external servers required. Perfect for isolated lab environments.
+* **Camera Sensor Presets:** Built-in exact pixel dimensions for high-end digital backs:
+  * Phase One IQ4 150MP (14,204 × 10,652)
+  * Phase One IQ3 100MP (11,608 × 8,708)
+  * Sony 60MP (9,504 × 6,336)
+* **Real-Time Calculation:** Instantly translates target PPI into Pixels-per-Centimeter (PPC) and physical FOV.
+* **Step Distance Logic:** Calculates the exact physical distance the camera must travel between shots based on your required overlap percentage.
+* **Visual Grid Blueprint:** Provides an immediate visual representation of the capture array and outputs the precise number of columns, rows, and total shots required for the capture sequence.
 
-Zero-Dependency Deployment: Packaged as a single, fully bundled HTML file. It runs locally in any web browser, making it perfect for isolated lab workstations or offline capture environments.
+## 🧮 How It Works (The Math)
 
-Use Case
-Ideal for digital content units and libraries processing large classmark batches where camera height (PPI) and overlap tolerances must be strictly maintained across hundreds of macro shots.
+The calculator uses standard digitization formulas to guarantee edge-to-edge coverage:
+
+1. **Pixels per cm (PPC):** `PPI / 2.54`
+2. **Field of View (FOV):** `Sensor Pixels / PPC`
+3. **Step Distance:** `FOV × (1 - Overlap Percentage)`
+4. **Grid Array:** `⌈(Object Size − FOV) / Step Distance⌉ + 1`
+
+## 🛠 Usage
+
+1. Clone this repository or download the source code.
+2. Open the `.html` file in any modern web browser (Chrome, Firefox, Safari, Edge).
+3. Select your camera sensor.
+4. Input your target PPI and the physical dimensions of the object in centimeters.
+5. Adjust the overlap percentage to fit your stitching tolerance (typically 20-30% for PTGui).
+6. Program your automated XYZ table controller with the resulting Step Distances and Grid Array (Columns × Rows).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. You are free to use, modify, and distribute this tool within your own imaging workflows.
