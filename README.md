@@ -1,6 +1,6 @@
 # CHIL XYZ Capture Grid Calculator
 
-![Capture Grid Calculator UI](./Main-Screen.png)
+![Capture Grid Calculator UI](./main.png)
 
 A standalone, interactive planning tool for automated XYZ table macro photography and high-resolution heritage digitization. 
 
