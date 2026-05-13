@@ -4,7 +4,7 @@
 
 A standalone, interactive planning tool for automated XYZ table macro photography and high-resolution heritage digitization. 
 
-When imaging oversized archival materials (like maps, manuscripts, and large folios), calculating the exact physical motion grid for an automated XYZ table is critical. This calculator instantly computes the necessary 1:1 Field of View (FOV), motor step sizes, and capture arrays to ensure exact overlap for stitching software like PTGui.
+When imaging oversized archival materials (like maps, manuscripts, and large folios), calculating the exact physical motion grid for an automated XYZ table is critical. This calculator instantly computes the necessary 1:1 Field of View (FOV) and capture arrays to ensure exact overlap for stitching software like PTGui.
 
 ## 🚀 Features
 
