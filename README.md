@@ -4,6 +4,11 @@
 
 A standalone, interactive planning tool for automated XYZ table macro photography and high-resolution heritage digitization. 
 
+<div align="center">
+  <a href="https://sjm208.github.io/xyz-grid-calculator/index.html"><strong>Explore the Live Tool »</strong></a>
+</div>
+
+
 When imaging oversized archival materials (like maps, manuscripts, and large folios), calculating the exact physical motion grid for an automated XYZ table is critical. This calculator instantly computes the necessary 1:1 Field of View (FOV) and capture arrays to ensure exact overlap for stitching software like PTGui.
 
 ## 🚀 Features
